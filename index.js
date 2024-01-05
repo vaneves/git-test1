@@ -14,6 +14,10 @@ app.get('/now', (req, res) => {
   })
 })
 
+app.get('/tomorrow', (req, res) => {
+  res.send('tomorrow')
+})
+
 app.listen(8899, () => {
   console.log('Server running in port 8899')
 })
