@@ -7,11 +7,19 @@ app.get('/hello', (req, res) => {
 })
 
 app.get('/now', (req, res) => {
-    const now = new Date()
-    res.json({
-        string: now,
-        timestamp: now.getTime()
-    })
+  const now = new Date()
+  res.json({
+    string: now,
+    timestamp: now.getTime()
+  })
+})
+
+app.get('/now2', (req, res) => {
+  const date = new Date()
+  date.setDate(date.getDate() + 1)
+  res.json({
+    twomorrow: date
+  })
 })
 
 app.listen(8899, () => {
