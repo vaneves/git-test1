@@ -6,14 +6,6 @@ app.get('/hello', (req, res) => {
   res.send('world')
 })
 
-app.get('/now', (req, res) => {
-  const now = new Date()
-  res.json({
-    string: now,
-    timestamp: now.getTime()
-  })
-})
-
 app.listen(8899, () => {
   console.log('Server running in port 8899')
 })
