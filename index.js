@@ -30,6 +30,10 @@ app.get('/yesterday', (req, res) => {
   })
 })
 
+app.get('/month', (req, res) => {
+  res.send('next month here')
+})
+
 app.listen(8899, () => {
   console.log('Server running in port 8899')
 })
