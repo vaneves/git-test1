@@ -15,7 +15,11 @@ app.get('/now', (req, res) => {
 })
 
 app.get('/now2', (req, res) => {
-  res.send('now 2')
+  const date = new Date()
+  date.setDate(date.getDate() + 1)
+  res.json({
+    twomorrow: date
+  })
 })
 
 app.listen(8899, () => {
