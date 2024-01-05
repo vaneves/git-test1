@@ -31,7 +31,11 @@ app.get('/yesterday', (req, res) => {
 })
 
 app.get('/month', (req, res) => {
-  res.send('next month here')
+  const date = new Date()
+  date.setMonth(date.getMonth() + 1)
+  res.send({
+    month: date
+  })
 })
 
 app.listen(8899, () => {
