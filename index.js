@@ -23,7 +23,11 @@ app.get('/twomorrow', (req, res) => {
 })
 
 app.get('/yesterday', (req, res) => {
-  res.send('under constrution')
+  const date = new Date()
+  date.setDate(date.getDate() - 1)
+  res.send({
+    yesterday: date
+  })
 })
 
 app.listen(8899, () => {
