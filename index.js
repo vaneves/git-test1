@@ -15,7 +15,9 @@ app.get('/now', (req, res) => {
 })
 
 app.get('/tomorrow', (req, res) => {
-  res.send('tomorrow')
+  const date = new Date()
+  date.setDate(date.getDate() + 1)
+  res.json(date)
 })
 
 app.listen(8899, () => {
