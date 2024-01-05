@@ -7,11 +7,15 @@ app.get('/hello', (req, res) => {
 })
 
 app.get('/now', (req, res) => {
-    const now = new Date()
-    res.json({
-        string: now,
-        timestamp: now.getTime()
-    })
+  const now = new Date()
+  res.json({
+    string: now,
+    timestamp: now.getTime()
+  })
+})
+
+app.get('/now2', (req, res) => {
+  res.send('now 2')
 })
 
 app.listen(8899, () => {
