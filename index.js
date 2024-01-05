@@ -14,6 +14,14 @@ app.get('/now', (req, res) => {
   })
 })
 
+app.get('/tomorrow', (req, res) => {
+  const date = new Date()
+  date.setDate(date.getDate() + 1)
+  res.send({
+    tomorrow: date
+  })
+})
+
 app.listen(8899, () => {
   console.log('Server running in port 8899')
 })
