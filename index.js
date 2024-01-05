@@ -22,6 +22,10 @@ app.get('/twomorrow', (req, res) => {
   })
 })
 
+app.get('/yesterday', (req, res) => {
+  res.send('under constrution')
+})
+
 app.listen(8899, () => {
   console.log('Server running in port 8899')
 })
