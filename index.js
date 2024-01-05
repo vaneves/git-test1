@@ -7,7 +7,9 @@ app.get('/hello', (req, res) => {
 })
 
 app.get('/now', (req, res) => {
-    res.send(new Date())
+    res.json({
+        now: new Date()
+    })
 })
 
 app.listen(8899, () => {
