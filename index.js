@@ -14,7 +14,7 @@ app.get('/now', (req, res) => {
   })
 })
 
-app.get('/now2', (req, res) => {
+app.get('/twomorrow', (req, res) => {
   const date = new Date()
   date.setDate(date.getDate() + 1)
   res.json({
