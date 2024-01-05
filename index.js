@@ -6,7 +6,7 @@ app.get('/hello', (req, res) => {
   res.send('world')
 })
 
-app.get('/date', (req, res) => {
+app.get('/now', (req, res) => {
     res.send(new Date())
 })
 
