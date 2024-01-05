@@ -7,7 +7,8 @@ app.get('/hello', (req, res) => {
 })
 
 app.get('/now', (req, res) => {
-  res.send('now')
+  const now = new Date()
+  res.json(now)
 })
 
 app.listen(8899, () => {
