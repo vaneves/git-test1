@@ -33,8 +33,10 @@ app.get('/yesterday', (req, res) => {
 app.get('/month', (req, res) => {
   const date = new Date()
   date.setMonth(date.getMonth() + 1)
+  const nextMonth = date.getMonth() + 1
+  const formattedMonth = (nextMonth < 10 ? '0' : '') + nextMonth
   res.send({
-    month: date
+    month: formattedMonth
   })
 })
 
